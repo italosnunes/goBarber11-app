@@ -30,7 +30,7 @@ function HomeStackScreen() {
   );
 }
 
-const AppRoutes = () => (
+const AppRoutes:React.FC = () => (
   <Tab.Navigator
     screenOptions={({ route }) => ({
       // eslint-disable-next-line react/prop-types

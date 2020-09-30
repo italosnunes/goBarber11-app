@@ -1,33 +1,35 @@
-require_relative '../node_modules/react-native/scripts/react_native_pods'
-require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+#target 'MyApp' do
+#  pod 'AFNetworking', '~> 2.6'
 
-platform :ios, '10.0'
+#pod 'ORStackView', '~> 3.0'
+#  pod 'SwiftyJSON', '~> 2.3'
+#end
+
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
 
 target 'app' do
-  config = use_native_modules!
-
-  use_react_native!(:path => config["reactNativePath"])
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'AFNetworking', '~> 2.6'
+  # Pods for app
 
   target 'appTests' do
-    inherit! :complete
+    inherit! :search_paths
     # Pods for testing
   end
 
-  # Enables Flipper.
-  #
-  # Note that if you have use_frameworks! enabled, Flipper will not work and
-  # you should disable these next few lines.
-  use_flipper!
-  post_install do |installer|
-    flipper_post_install(installer)
-  end
 end
 
 target 'app-tvOS' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
   # Pods for app-tvOS
 
   target 'app-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
+
 end
