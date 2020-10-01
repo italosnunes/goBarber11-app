@@ -10,12 +10,15 @@ export const Container = styled.View`
 `;
 
 export const Form = styled.View`
+  flex:1;
+
   align-self: stretch;
+  background:#000;
 `;
 
 export const Image = styled.Image`
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   margin-top: 40px;
   margin-bottom: 0px;
   justify-content: center;

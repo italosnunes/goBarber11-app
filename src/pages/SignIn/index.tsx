@@ -5,7 +5,8 @@ import {
   KeyboardAvoidingView,
   Platform,
   Alert,
-  TextInput
+  TextInput,
+  Image
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import { useNavigation } from '@react-navigation/native';
@@ -14,15 +15,14 @@ import { FormHandles } from '@unform/core';
 import * as Yup from 'yup';
 import getValidationErrors from '../../utils/getValidationErrors';
 import Input from '../../components/Input';
+import Button from '../../components/Button';
 import logo from '../../assets/logo.png'
 import { useAuth } from '../../hooks/auth';
 
 import {
   Container,
   Title,
-  Button,
   Text,
-  Image,
   InputView,
   InputText,
   SignLink,
@@ -118,14 +118,14 @@ const SignIn:React.FC = () =>  {
                 onSubmitEditing={() => formRef.current?.submitForm()}
               />
 
+            </Form>
               <Button
                 onPress={() => {
                   formRef.current?.submitForm();
                 }}
               >
-                <Text>Entrar</Text>
+                Entrar
               </Button>
-            </Form>
 
             <SignLink>
               <SignLinkText>Esqueci minha senha</SignLinkText>
