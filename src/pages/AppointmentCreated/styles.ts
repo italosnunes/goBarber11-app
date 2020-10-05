@@ -1,39 +1,47 @@
 import styled, { css } from 'styled-components/native';
 import { Platform } from 'react-native';
+import { RectButton } from 'react-native-gesture-handler';
 
 export const Container = styled.View`
   flex: 1;
-  background: #312e38;
+  justify-content:center;
+  align-items:center;
+  padding: 0 24px;
 `;
 
-export const Header = styled.View`
-  width: 100%;
-  height: 60px;
-  align-items: center;
+export const Title  = styled.Text`
+  font-size:32px;
+  color: #f4ede8;
+  font-family:'RobotoSlab-Medium';
+  margin-top: 48px;
+  text-align:center;
+
+`;
+
+
+export const Description  = styled.Text`
+  font-family:'RobotoSlab-Regular';
+  font-size:18px;
+  color:#999591;
+  margin-top:16px;
+`;
+
+
+export const OkButton  = styled(RectButton)`
+  background:#ff9000;
   justify-content: center;
-  border-bottom-width: 1px;
-  border-color: rgba(0, 0, 0, 0.2);
-
-  ${Platform.select({
-    ios: css`
-      margin-top: 40px;
-    `,
-    android: css`
-      margin-top: 0px;
-    `,
-  })}
+  align-items:center;
+  border-radius: 10px;
+  margin-top: 24px;
+  padding: 12px 24px;
 `;
 
-export const Title = styled.Text`
-  color: #ddd;
-  font-weight: bold;
-  font-family: 'RobotoSlab-Medium';
-  font-size: 18px;
+
+export const OkButtonText = styled.Text`
+  color: #312e38;
+  font-size:18px;
+  font-family:'RobotoSlab-Regular';
 `;
 
-export const List = styled.FlatList.attrs({
-  showsVerticalScrollIndicator: false,
-  contentContainerStyle: { padding: 0 },
-})`
-  margin-top: -10px;
-`;
+
+
